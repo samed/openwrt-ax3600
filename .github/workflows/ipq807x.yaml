@@ -27,8 +27,35 @@ jobs:
                 echo "CONFIG_PACKAGE_luci=y\n" >> .config
                 echo "CONFIG_PACKAGE_wpad-basic-wolfssl=m\n" >> .config
                 echo "CONFIG_PACKAGE_wpad-wolfssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_libwolfssl=n\n" >> .config
+                echo "CONFIG_PACKAGE_libwolfssl-cpu-crypto=y\n" >> .config             
+                echo "CONFIG_PACKAGE_kmod-qca-nss-dp=y\n" >> .config
+                echo "CONFIG_PACKAGE_qca-ssdk-shell=y\n" >> .config
+                echo "CONFIG_PACKAGE_nss-firmware-ipq8074=y\n" >> .config
+                echo "CONFIG_PACKAGE_kmod-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_wireguard-tools=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_htop=y\n" >> .config
+                echo "CONFIG_PACKAGE_wpad-mesh-wolfssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_iperf3=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-sqm=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-ssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_qrencode=y\n" >> .config
+                echo "CONFIG_PACKAGE_curl=y\n" >> .config
+                echo "CONFIG_PACKAGE_adguardhome=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-theme-openwrt-2020=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-ddns=y\n" >> .config
+                echo "CONFIG_PACKAGE_ddns-scripts=y\n" >> .config
+                echo "CONFIG_PACKAGE_vpn-policy-routing=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-vpn-policy-routing=y\n" >> .config
+                echo "CONFIG_PACKAGE_wireguard-tools=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_6in4=y\n" >> .config
+                echo "CONFIG_PACKAGE_openvpn-wolfssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-openvpn=y\n" >> .config
+                echo "CONFIG_PACKAGE_kmod-tun=y\n" >> .config
                 make defconfig
-
+                
             - name: Download package sources
               run: make download V=s
 
