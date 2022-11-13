@@ -48,7 +48,8 @@ jobs:
                 echo "CONFIG_PACKAGE_adblock=y\n" >> .config
                 echo "CONFIG_PACKAGE_luci-app-adblock=y\n" >> .config
                 echo "CONFIG_PACKAGE_tcpdump=y\n" >> .config
-                echo "CONFIG_PACKAGE_stubby=y\n" >> .config
+                echo "CONFIG_PACKAGE_https-dns-proxy=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-https-dns-proxy=y\n" >> .config
                 make defconfig
 
             - name: Download package sources
