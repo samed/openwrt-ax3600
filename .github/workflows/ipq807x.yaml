@@ -27,8 +27,30 @@ jobs:
                 echo "CONFIG_PACKAGE_luci=y\n" >> .config
                 echo "CONFIG_PACKAGE_wpad-basic-wolfssl=m\n" >> .config
                 echo "CONFIG_PACKAGE_wpad-wolfssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_kmod-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_wireguard-tools=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-proto-wireguard=y\n" >> .config
+                echo "CONFIG_PACKAGE_htop=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-sqm=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-ssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_qrencode=y\n" >> .config
+                echo "CONFIG_PACKAGE_curl=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-theme-openwrt-2020=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-ddns=y\n" >> .config
+                echo "CONFIG_PACKAGE_ddns-scripts=y\n" >> .config
+                echo "CONFIG_PACKAGE_vpn-policy-routing=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-vpn-policy-routing=y\n" >> .config
+                echo "CONFIG_PACKAGE_openvpn-wolfssl=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-openvpn=y\n" >> .config
+                echo "CONFIG_PACKAGE_kmod-tun=y\n" >> .config
+                echo "CONFIG_PACKAGE_adblock=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-adblock=y\n" >> .config
+                echo "CONFIG_PACKAGE_tcpdump=y\n" >> .config
+                echo "CONFIG_PACKAGE_https-dns-proxy=y\n" >> .config
+                echo "CONFIG_PACKAGE_luci-app-https-dns-proxy=y\n" >> .config
                 make defconfig
-
+                
             - name: Download package sources
               run: make download V=s
 
